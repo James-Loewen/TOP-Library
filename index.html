@@ -7,8 +7,34 @@
   <title>TOP | Library</title>
 </head>
 <body>
-  <h1>Name a book</h1>
-  <input type="text" id="book">
-  <button type="button" id="bookButton">click me</button>
+  <main>
+    <dialog id="new-book-dialog">
+      <form class="flex" onsubmit="return false">
+        <h1>New book time!</h1>
+        <div class="input-group">
+          <label for="title-input">Title:</label>
+          <input type="text" id="title-input" name="title-input" required>
+        </div>
+        <div class="input-group">
+          <label for="author-input">Author:</label>
+          <input type="text" id="author-input" name="author-input" required>
+        </div>
+        <button type="submit" id="new-book-submit">Submit</button>
+        <button type="button" id="cancel-input">Cancel</button>
+      </form>
+    </dialog>
+    <div class="header">
+      <h1 id="logo-text">Library</h1>
+      <button type="button" id="add-book">New</button>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <button type="button" class="delete-book">X</button>
+        <span class="title">The Hobbit</span>
+        <span class="author">J.R.R. Tolkien</span>
+        <button type="button" class="read-status">Unread</button>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
