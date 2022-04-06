@@ -53,6 +53,7 @@ body {
 main {
   width: 75%;
   margin: auto;
+  padding-bottom: 2rem;
 }
 
 .header {
