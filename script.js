@@ -26,7 +26,7 @@ function populateBookList() {
     let xButton = document.createElement('button');
     xButton.type = 'button';
     xButton.classList.add('delete-book');
-    xButton.textContent = 'X';
+    xButton.textContent = 'delete';
     let titleText = document.createElement('span');
     titleText.classList.add('title');
     titleText.textContent = book.title;
@@ -42,10 +42,10 @@ function populateBookList() {
     } else {
       readButton.textContent = 'Unread';
     }
-    card.appendChild(xButton);
     card.appendChild(titleText);
     card.appendChild(authorText);
     card.appendChild(readButton);
+    card.appendChild(xButton);
     cardContainer.appendChild(card);
   });
   

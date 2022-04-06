@@ -38,23 +38,24 @@ ol, ul {
 /* Reset ends here */
 
 :root {
-  --title-font: Verdana, monospace;
-  --author-font: Georgia, monospace;
-  --btn-bg: rgb(129, 73, 36);
+  --title-font: Verdana, sans-serif;
+  --author-font: Georgia, serif;
+  --btn-bg: olive;
+  --fc-black: #444;
 }
 
 body {
   font-family: var(--author-font);
+  color: var(--fc-black);
+  background-color: ivory;
 }
 
 main {
-  width: 90%;
+  width: 75%;
   margin: auto;
 }
 
 .header {
-  /* width: 90%;
-  margin: auto; */
   padding-block: 2rem;
   display: flex;
   justify-content: space-between;
@@ -62,7 +63,8 @@ main {
 }
 
 #logo-text {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  /* font-weight: 700; */
   justify-self: start;
 }
 
@@ -72,13 +74,13 @@ main {
   background-color: var(--btn-bg);
   border-radius: 2rem;
   font-size: 1rem;
-  color: #FFF;
+  color: #FFFFF0;
   font-weight: 700;
   justify-self: end;
 }
 
 #add-book:hover {
-  background-color: rgb(119, 63, 26);
+  background-color: saddlebrown;
 }
 
 #add-book:active {
@@ -87,47 +89,69 @@ main {
 }
 
 .card-container {
-  /* width: 90%; */
-  margin: auto;
+  /* margin: auto; */
   display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
 .card {
   padding: 1rem;
-  height: 180px;
+  min-height: 150px;
+  text-align: center;
   display: flex;
   gap: 1rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: 5px solid darksalmon; */
-  border-radius: 1rem;
-  box-shadow: 0 0 1rem #DDD;
-  text-align: center;
+  background-color: #222;
+  color: #FFFFF0;
+  /* font-size: 2rem; */
+  box-shadow: 0 0 0 -5px olive,
+    0 12px 0 -5px cornflowerblue,
+    12px 0 0 -5px darksalmon,
+    20px 20px 20px -5px #DDD;
+/*   border-radius: 10px; */
+  transition: box-shadow 300ms 100ms ease,
+    transform 200ms 50ms ease,
+    font-size 600ms 100ms,
+    border-left 400ms 400ms ease;
+}
+
+.card:hover,
+.card:focus {
+  box-shadow: 20px 0 0 -10px olive,
+    0 20px 0 -10px cornflowerblue,
+    15px 15px 0 -9px darksalmon;
+/*     25px 25px 25px -5px #DDD; */
+  transform: scale(1.1);
+  /* border-left: 15px solid SandyBrown; */
+/*   font-size: 2.5rem; */
+/*   border-radius: 20%; */
 }
 
 .delete-book {
   padding: 0;
-  width: 1rem;
-  height: 1rem;
-  font-size: .5rem;
-  font-family: sans-serif;
-  font-weight: 900;
-  border-radius: 50%;
-  border: 1px solid gray;
+  font-size: .8rem;
+  font-family: monospace;
+  border: none;
+  color: #FFFFF0;
+  background-color: #222;
+}
+
+.delete-book:hover {
+  text-decoration: underline;
 }
 
 .read-status {
   border: none;
-  background-color: rgb(255, 228, 196);
+  background-color: cornflowerblue;
   padding: .4rem;
   border-radius: .4rem;
 }
 
 .read-status:hover {
-  background-color: rgb(245, 218, 186);
+  background-color: #89ADED;
 }
 
 .read-status:active {
@@ -135,12 +159,12 @@ main {
 }
 
 .read {
-  background-color: salmon;
+  background-color: darksalmon;
   text-decoration: line-through;
 }
 
 .read:hover {
-  background-color: darksalmon;
+  background-color: salmon;
 }
 
 .title {
@@ -151,9 +175,8 @@ main {
 }
 
 .author {
-  padding-left: 3rem;
+  /* padding-left: 3rem; */
   font-family: var(--author-font);
-  /* align-self: flex-end; */
 }
 
 #new-book-dialog {
