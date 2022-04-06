@@ -105,6 +105,7 @@ main {
   /* border: 5px solid darksalmon; */
   border-radius: 1rem;
   box-shadow: 0 0 1rem #DDD;
+  text-align: center;
 }
 
 .delete-book {
