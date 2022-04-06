@@ -173,11 +173,13 @@ main {
   font-weight: 700;
   font-style: italic;
   font-size: 2rem;
+  text-transform: capitalize;
 }
 
 .author {
   /* padding-left: 3rem; */
   font-family: var(--author-font);
+  text-transform: capitalize;
 }
 
 #new-book-dialog {
