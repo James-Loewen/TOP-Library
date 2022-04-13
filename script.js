@@ -1,7 +1,15 @@
-function Book(title, author, haveRead = false) {
-  this.title = title;
-  this.author = author;
-  this.haveRead = haveRead
+// function Book(title, author, haveRead = false) {
+//   this.title = title;
+//   this.author = author;
+//   this.haveRead = haveRead
+// }
+
+class Book {
+  constructor(title, author, haveRead = false) {
+    this.title = title;
+    this.author = author;
+    this.haveRead = haveRead;
+  }
 }
 
 const myLibrary = [];
